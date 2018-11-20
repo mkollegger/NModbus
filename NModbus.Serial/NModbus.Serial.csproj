@@ -5,12 +5,13 @@
     <VersionPrefix>1.0.0</VersionPrefix>
 	<Company>OSS</Company>
     <Authors>Dmitry Turin, Rich Quackenbush, Jesse Beard</Authors>
-    <TargetFrameworks>net46;netstandard2.0</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0</TargetFrameworks>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <AssemblyName>NModbus.Serial</AssemblyName>
     <PackageId>NModbus.Serial</PackageId>
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>	
-	<NoWarn>1701;1702;1705;1591</NoWarn>
+	<NoWarn>1701;1702;1705;1591</NoWarn>	
+	<AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
   </PropertyGroup>
 	
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
@@ -25,11 +26,6 @@
     
   <ItemGroup>
     <ProjectReference Include="..\NModbus\NModbus.csproj" />
-  </ItemGroup>
-
-  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
-    <Reference Include="System" />
-    <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
 
   <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
